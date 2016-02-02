@@ -1,5 +1,5 @@
 FROM gliderlabs/alpine
 MAINTAINER Markku Virtanen
-RUN apk-install git
-RUN apk-install nodejs
+RUN apk add --no-cache git
+RUN apk add --no-cache nodejs
 RUN npm i pm2 -g
