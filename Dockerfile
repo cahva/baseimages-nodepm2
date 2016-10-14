@@ -1,5 +1,5 @@
-FROM alpine:edge
+FROM mhart/alpine-node:6.8
 MAINTAINER Markku Virtanen
+RUN apk update
 RUN apk add --no-cache git
-RUN apk add --no-cache nodejs
 RUN npm i pm2 -g
