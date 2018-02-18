@@ -1,5 +1,5 @@
-FROM mhart/alpine-node:6.11.4
-MAINTAINER Markku Virtanen
-RUN apk update
-RUN apk add --no-cache git
-RUN npm i pm2 -g
+FROM mhart/alpine-node:8.9.4
+RUN apk update && \
+  apk add --no-cache git make gcc g++ python && \
+  npm i pm2 -g && \
+  pm2 install profiler
